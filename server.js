@@ -10,6 +10,10 @@ app.get('/api/course',(req,res) => {
     res.send([1,2,3,4,5,6,7]);
 })
 
+app.get('/api/course/:id',(req , res)=> {
+    res.send(req.params.id);
+} )
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
